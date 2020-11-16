@@ -1,11 +1,11 @@
 import argparse
 import torch
-from models.autoencoder import ConvAutoEncoder
-from data.dataloader import get_dataloader_experiment
-from utils.math import cosine_similarity, centroid_point, parametric_line_equations, distance_between_two_points
 import numpy as np
 from tqdm import tqdm
 import matplotlib.pyplot as plt
+from data.dataloader import get_dataloader_experiment
+from models.autoencoder import MNIST_AutoEncoder
+from utils.math import cosine_similarity, centroid_point, parametric_line_equations, distance_between_two_points
 
 
 def get_args():
@@ -24,16 +24,6 @@ def get_args():
                         help='number of neighbour for each sample')
     parser.add_argument('--plot_graphics', default=True, type=bool)
     return parser.parse_args()
-
-
-def load_autoencoder_model(n_input_channels, weights_path):
-    model = ConvAutoEncoder(n_input_channels)
-    model.load_state_dict(
-        torch.load(weights_path, map_location=torch.device('cpu'))
-    )
-    model.eval()
-    return model
-
 
 def construct_dataset(generated_image_path, real_image_path, autoencoder):
     dataloader = get_dataloader_experiment(
@@ -112,12 +102,9 @@ def distance_comparison_to_distribution(data, args, on_fake=True):
 
 def main():
     args = get_args()
-    if args.dataset == 'mnist':
-        n_channels = 1
-    else:
-        n_channels = 3
-    model = load_autoencoder_model(
-        n_channels, args.autoencoder_weights_path
+    model = torch.load(
+    	args.autoencoder_weights_path, 
+    	map_location=torch.device('cpu')
     )
     data = construct_dataset(
         args.data_path_generated, args.data_path_real, model
@@ -157,9 +144,9 @@ def main():
     )
     plt.legend(loc=1, prop={'size': 20})
     plt.xticks(list(range(args.n_neighbours + 1)))
-    plt.xlabel(f'Neighbours - KNN centroid distances (MNIST)', fontsize=26)
+    plt.xlabel(f'Neighbours - KNN centroid distances ({args.dataset})', fontsize=26)
     plt.ylabel('Scaled distances', fontsize=26)
-    plt.savefig('mnist_distribution.png')
+    plt.savefig(f'{args.dataset}_distribution.png')
     plt.show()
 
 
