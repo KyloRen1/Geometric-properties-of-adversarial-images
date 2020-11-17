@@ -4,8 +4,9 @@ import numpy as np
 from tqdm import tqdm
 import matplotlib.pyplot as plt
 from data.dataloader import get_dataloader_experiment
-from models.autoencoder import MNIST_AutoEncoder
 from utils.math import cosine_similarity, centroid_point, parametric_line_equations, distance_between_two_points
+######### load autoencoder model here
+from models.autoencoder import MYAUTOENCODER
 
 
 def get_args():
