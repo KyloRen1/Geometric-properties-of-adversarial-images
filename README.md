@@ -1,4 +1,4 @@
-# Geometric-properties-of-adversarial
+# Geometric properties of adversarial images
 
 **Bogdan Ivanyuk-Skulskiy (NaUKMA), Galyna Kriukova (NaUKMA), Andrii Dmytryshyn (Örebro University)**
 
