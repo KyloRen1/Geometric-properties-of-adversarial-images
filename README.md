@@ -9,6 +9,9 @@
 ## Abstract
 Machine learning models are now widely used in a variety of tasks. However, they are vulnerable to adversarial perturbations. These are slight, intentionally worst-case, modi- fications to input that change the model’s prediction with high confidence, without causing a human eye to spot a difference from real samples. The detection of adversarial samples is an open problem. In this work, we explore a novel method towards adversarial image detection with linear algebra approach. This method is built on a comparison of distances to the centroids for a given point and its neighbours. The method of adversarial examples detection is explained theoretically, and the numerical experiments are done to illustrate the approach.
 
+## About the paper
+
+## Code
 
 ### Citation
 ```
