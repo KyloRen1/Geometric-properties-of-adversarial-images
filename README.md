@@ -2,7 +2,7 @@
 
 **Bogdan Ivanyuk-Skulskiy (NaUKMA), Galyna Kriukova (NaUKMA), Andrii Dmytryshyn (Örebro University)**
 
-**Paper:**[https://ieeexplore.ieee.org/abstract/document/9204251](https://ieeexplore.ieee.org/abstract/document/9204251]
+**Paper:**[https://ieeexplore.ieee.org/abstract/document/9204251] (https://ieeexplore.ieee.org/abstract/document/9204251]
 
 **DSMP 2020**
 
