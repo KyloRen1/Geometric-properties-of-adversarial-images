@@ -39,6 +39,10 @@ Therefore we may use the following statement as a criterion if a given example i
 
 ***For every point outside of a given (differential_ manifold and large enough integer k, the distance to the centroid of its k nearest neighbors is significantly larger than the distance from a point on this manifold to the centroid of its k nearest eighbors***
 
+The above theory results in the following method described in Algorithm 1.
+
+<p align="center"><img src="images/algorithm.png" width="600"></p>
+
 ## Code
 To test the algorithm on other data first train autoencoder model and save model architercture in `models/autoencoder.py` and model weights in `data/model_weights/` folder. 
 
