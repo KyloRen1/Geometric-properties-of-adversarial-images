@@ -11,6 +11,14 @@ Machine learning models are now widely used in a variety of tasks. However, they
 
 ## About the paper
 
+Many learning algorithms exploit the idea that data concentrates around a low dimensional manifold. In the following method, we use geometrical characteristics of such a manifold for detecting adversarial examples.
+
+We make the following assumptions on our data:
+	(a) Data points belong to a smooth manifold
+	(b) For every point on this manifold (data point or not), the centroid of its $k$ nearest neighbors (KNN) is approximately at the same distance from this point
+	(c) For a point that does not belong to the manifold the set of its KNN coincides with the set of KNN of its projection on the manifold
+
+
 ## Code
 To test the algorithm on other data first train autoencoder model and save model architercture in `models/autoencoder.py` and model weights in `data/model_weights/` folder. 
 
