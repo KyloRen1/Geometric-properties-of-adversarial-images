@@ -15,7 +15,8 @@ Many learning algorithms exploit the idea that data concentrates around a low di
 
 We make the following assumptions on our data: <br>
 	(a) Data points belong to a smooth manifold<br>
-	(b) For every point on this manifold (data point or not), the centroid of its $$k$$ nearest neighbors (KNN) is approximately at the same distance from this point<br>
+	(b) For every point on this manifold (data point or not), the centroid of its 
+	<img src="https://render.githubusercontent.com/render/math?math=k"> nearest neighbors (KNN) is approximately at the same distance from this point<br>
 	(c) For a point that does not belong to the manifold the set of its KNN coincides with the set of KNN of its projection on the manifold
 
 
