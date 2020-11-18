@@ -19,6 +19,26 @@ We make the following assumptions on our data: <br>
 &nbsp;&nbsp;&nbsp; (c) For a point that does not belong to the manifold the set of its KNN coincides with the set of KNN of its projection on the manifold
 
 
+Let <img src="https://render.githubusercontent.com/render/math?math=x"> be a point outside of a given manifold, and <img src="https://render.githubusercontent.com/render/math?math=M_x"> be the centroid of its <img src="https://render.githubusercontent.com/render/math?math=k"> nearest neighbors. For the Euclidean distance we have 
+
+<p align="center">
+  <img src="https://render.githubusercontent.com/render/math?math=(M_x x)^2 = (x Pr_x)^2  %2B  (Pr_x M_x)^2"> 
+</p>
+
+where <img src="https://render.githubusercontent.com/render/math?math=Pr_x"> is the projection of <img src="https://render.githubusercontent.com/render/math?math=x"> on the manifold.
+
+From our assumption (c) we have that if <img src="https://render.githubusercontent.com/render/math?math=M_x"> is a centroid for KNN of <img src="https://render.githubusercontent.com/render/math?math=x"> then <img src="https://render.githubusercontent.com/render/math?math=M_x"> is also a centroid for KNN of <img src="https://render.githubusercontent.com/render/math?math=Pr_x">/ Combining this with the assumption (b) we have that <img src="https://render.githubusercontent.com/render/math?math=Pr_x M_x = M'_{x'} x'">, for any points <img src="https://render.githubusercontent.com/render/math?math=x'"> and its KNN's centroid <img src="https://render.githubusercontent.com/render/math?math=M'_{x'}">. Therefore <img src="https://render.githubusercontent.com/render/math?math=(M_x x)^2 = (x Pr_x)^2  %2B  (M'_{x'} x')^2">.
+
+Now since X is outside of our manifold we have <img src="https://render.githubusercontent.com/render/math?math=x Pr_x > 0"> and thus <img src="https://render.githubusercontent.com/render/math?math=M_x x > M'_{x'} x' ">. Moreover,
+
+<p align="center">
+  <img src="https://render.githubusercontent.com/render/math?math=x Pr_x = \sqrt{(M_x x)^2 - (M'_{x'} x')^2 }"> 
+</p>
+
+Therefore we may use the following statement as a criterion if a given example is adversarial of not:
+
+***For every point outside of a given (differential_ manifold and large enough integer k, the distance to the centroid of its k nearest neighbors is significantly larger than the distance from a point on this manifold to the centroid of its k nearest eighbors***
+
 ## Code
 To test the algorithm on other data first train autoencoder model and save model architercture in `models/autoencoder.py` and model weights in `data/model_weights/` folder. 
 
