@@ -37,7 +37,7 @@ Now since X is outside of our manifold we have <img src="https://render.githubus
 
 Therefore we may use the following statement as a criterion if a given example is adversarial of not:
 
-***For every point outside of a given (differential_ manifold and large enough integer k, the distance to the centroid of its k nearest neighbors is significantly larger than the distance from a point on this manifold to the centroid of its k nearest neighbors***
+***For every point outside of a given (differential) manifold and large enough integer k, the distance to the centroid of its k nearest neighbors is significantly larger than the distance from a point on this manifold to the centroid of its k nearest neighbors***
 
 The above theory results in the following method described in Algorithm 1.
 
