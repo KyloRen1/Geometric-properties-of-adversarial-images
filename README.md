@@ -52,7 +52,12 @@ To test the algorithm on other data first train the autoencoder model and save m
 
 Afterwards run the following code:
 
-`python run_experiment.py --data_path_real=data/train_data/real_data --data_path_generated=data/train_data/adv_data --autoencoder_weights_path=data/model_weights/my_autoencoder_full.pth --number_of_samples=1000`
+```md
+python run_experiment.py --data_path_real=data/train_data/real_data \
+  --data_path_generated=data/train_data/adv_data \
+  --autoencoder_weights_path=data/model_weights/my_autoencoder_full.pth \
+  --number_of_samples=1000
+```
 
 
 ### Citation
